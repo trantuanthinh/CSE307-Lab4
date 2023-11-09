@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <header>
+      <h1><center>MEMBER REGISTRATION</center></h1>
+    </header>
+    <form name="dangky" method="post" action="#">
+      <fieldset>
+        <legend><b>Personal Information</b></legend>
+        <table>
+          <tr>
+            <td>Full name:</td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="day">Birthday:</label>
+            </td>
+            <td>
+              <select id="day" name="day">
+                <option value="" selected disabled>Select a day</option>
+              </select>
+              <script>
+                var daySelect = document.getElementById("day");
+                for (var i = 1; i <= 31; i++) {
+                  var option = document.createElement("option");
+                  var dayNumber = i < 10 ? "0" + i : i.toString();
+                  option.value = dayNumber;
+                  option.textContent = dayNumber;
+                  daySelect.appendChild(option);
+                }
+              </script>
+              <label for="month">Month:</label>
+              <select id="month" name="month">
+                <option value="" selected disabled>Select a month</option>
+              </select>
+              <script>
+                var monthSelect = document.getElementById("month");
+                for (var i = 1; i <= 12; i++) {
+                  var option = document.createElement("option");
+                  var monthNumber = i < 10 ? "0" + i : i.toString();
+                  option.value = monthNumber;
+                  option.textContent = monthNumber;
+                  monthSelect.appendChild(option);
+                }
+              </script>
+              <label for="year">Year:</label>
+              <input type="number" style="width: 50px" />
+            </td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type="radio" name="gender" /><label>Male</label
+              ><input type="radio" name="gender" /><label>Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td><textarea name="" id="" cols="20" rows="3"></textarea></td>
+          </tr>
+          <tr>
+            <td>Telephone:</td>
+            <td><input type="number" /></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type="email" required /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend><b>Credentials</b></legend>
+        <table>
+          <tr>
+            <td>Username:</td>
+            <td><input type="text" required /></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input type="password" required /></td>
+          </tr>
+          <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" required /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <p>
+        <center>
+          <input type="submit" value="Login" />
+          <input type="reset" value="Cancel" />
+        </center>
+      </p>
+    </form>
+  </body>
+</html>
