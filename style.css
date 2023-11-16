@@ -13,6 +13,10 @@ footer div {
     background-color: #A2EBB1;
 }
 
+body img:hover {
+    transform: scale(1.1);
+}
+
 a {
     text-decoration: none;
 }
